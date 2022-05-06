@@ -1,8 +1,23 @@
 
 
+###################### SELECT, COUNT(*) ##############################################
+
 SELECT Name, Continent, Region, LifeExpectancy FROM Country WHERE Continent='North America' ORDER BY LifeExpectancy DESC LIMIT 5 OFFSET 20;
   DESC --> Display retrieve data in descendent
   LIMIT 5 --> Limit the retrieve data in 5
   OFFSET 20 --> Skip the first 20 rows
-  
+ 
+SELECT COUNT (*) FROM Country WHERE Population>1000000 AND Continent='Europe';
+  COUNT --> to Count rows instead listing them
+
+######################## INSERT, UPDATE, DELETE STATEMENTS ###########################
+
+INSERT INTO customer (name, address, city, state, zip)
+    VALUES ('alan chavez', 'Ireland', 'Dublin', 'Leisester', 'D09F512');
+
+UPDATE customer SET address = 'calle walaby', state = 'queti';
+
+DELETE FROM customer WHERE id=4;
+
+ 
 
