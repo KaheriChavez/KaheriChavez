@@ -1,0 +1,32 @@
+
+
+Telnet  Port 23 --> To connect remotely to another computer $telnet {{IP}}{{23}}
+
+
+HTTP    Port 80   (Hyper Text Transfer Protocol) Protocol used to transfer web pages  $telnet {{IP}}{{80}}
+FTP      Port 21   (File Transfer Protocol) Transfer data between different systems
+      $ftp {{IP}}
+      ${{user}}
+      ${{Pass}}
+      $ls
+      $get {{file}}  --> to copy files to your local host
+SMP     Port 25   (Simple Mail Transfer Protocol) --> Protocol to send email (comunicate with the server) 
+      $telnet {{IP}}{{25}}
+POP3    Port 110  (Post Office Protocol Version 3) --> to download the email 
+      $telnet {{IP}}{{110}}
+IMAP  Port 143    (Internet Message Access Protocol)  --> syncronize email in between multiple devices
+
+Protocol 	TCP Port 	Application(s) 	  Data Security
+FTP       21        File Transfer     Cleartext
+FTPS 	    990 	File Transfer 	Encrypted
+HTTP 	    80 	Worldwide Web 	Cleartext
+HTTPS     443 	Worldwide Web 	Encrypted
+IMAP    	143 	Email (MDA) 	Cleartext
+IMAPS 	  993 	Email (MDA) 	Encrypted
+POP3 	    110 	Email (MDA) 	Cleartext
+POP3S 	  995 	Email (MDA) 	Encrypted
+SFTP 	    22 	File Transfer 	Encrypted
+SSH 	    22 	Remote Access and File Transfer 	Encrypted
+SMTP 	    25 	Email (MTA) 	Cleartext
+SMTPS 	  465 	Email (MTA) 	Encrypted
+Telnet 	  23 	Remote Access 	Cleartext
