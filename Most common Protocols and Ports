@@ -30,3 +30,12 @@ SSH 	    22 	Remote Access and File Transfer 	Encrypted
 SMTP 	    25 	Email (MTA) 	Cleartext
 SMTPS 	  465 	Email (MTA) 	Encrypted
 Telnet 	  23 	Remote Access 	Cleartext
+
+###############   SSH   ####################
+
+~ scp mark@10.10.186.49:/home/mark/archive.tar.gz ~. This command will copy a file named archive.tar.gz from the remote 
+system located in the /home/mark directory to ~, i.e., the root of the home directory of the currently logged-in user.
+
+~ scp backup.tar.bz2 mark@10.10.186.49:/home/mark/. This command will copy the file backup.tar.bz2 from the local system 
+to the directory /home/mark/ on the remote system.
+
