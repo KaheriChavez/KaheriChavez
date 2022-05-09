@@ -42,8 +42,20 @@ INSERT INTO test (b,c) VALUES ('one', 'two');
 
 CREATE TABLE test (a TEXT UNIQUE, b TEXT, c TEXT DEFAULT 'panda');
     TEXT UNIQUE, TEXT DEFAULT ....
-    
 
+#################### INTEGER PRIMARY KEY (DIFFERENT IN EACH SQL DATABASE) #############################################
+CREATE TABLE test (
+ id INTEGER PRIMARY KEY,    // NEW AND UNIQUE SEQUENCIAL NUMBER FOR EACH ROW CREATED
+ 
+ 
+ ############################ FILTERING ##########################################
+ 
+ SELECT Name, Continent, Population FROM country      // any row including the word 'island'
+    WHERE Name LIKE '%island%' ORDER BY Name;         // '%island' any row with island at the end 
+   
+   WHERE Continent IN ('Europe', 'Asia') ORDER BY Name;    //Any matching word in the column selected 
+
+SELECT DISTINCT Continent FROM Country;               // Showing Just unique results
 
 
 
