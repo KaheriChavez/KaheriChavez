@@ -10,7 +10,7 @@ SELECT Name, Continent, Region, LifeExpectancy FROM Country WHERE Continent='Nor
 SELECT COUNT (*) FROM Country WHERE Population>1000000 AND Continent='Europe';
   COUNT --> to Count rows instead listing them
 
-######################## INSERT, UPDATE, DELETE STATEMENTS ###########################
+######################## INSERT, UPDATE, DELETE STATEMENTS, ALTER ###########################
 // Null = is the absence of value
 
 INSERT INTO customer (name, address, city, state, zip)
@@ -37,6 +37,8 @@ CREATE TABLE test(      // avoid to create rows with null values if declared
 
 INSERT INTO test (b,c) VALUES ('one', 'two');
 
+ALTER TABLE       // To add a new column and its data Type
+
 
 ############### CONTRAINS CREATE RULES GOVERING THE BEHAVIOURS OF COLUMNS IN YOUR TABLE ################################
 
@@ -56,6 +58,10 @@ CREATE TABLE test (
    WHERE Continent IN ('Europe', 'Asia') ORDER BY Name;    //Any matching word in the column selected 
 
 SELECT DISTINCT Continent FROM Country;               // Showing Just unique results
+
+############ RELATION DATABASES WHERE SOME TABLES CONTAIN INFORMATION FROM OTHER TABLES #############################
+
+JOIN
 
 
 
