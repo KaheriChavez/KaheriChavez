@@ -11,6 +11,7 @@ SELECT COUNT (*) FROM Country WHERE Population>1000000 AND Continent='Europe';
   COUNT --> to Count rows instead listing them
 
 ######################## INSERT, UPDATE, DELETE STATEMENTS ###########################
+// Null = is the absence of value
 
 INSERT INTO customer (name, address, city, state, zip)
     VALUES ('alan chavez', 'Ireland', 'Dublin', 'Leisester', 'D09F512');
@@ -19,5 +20,30 @@ UPDATE customer SET address = 'calle walaby', state = 'queti';
 
 DELETE FROM customer WHERE id=4;
 
- 
+CREATE TABLE test (a INTEGER, b TEXT, c TEXT);
+    Create a table with 3 columns
+INSERT INTO test VALUES (1, 'This', 'Right here!' );
+    Populate a row with the data
+INSERT INTO test ( b, c) VALUES ('tHAT', 'oVER HERE!');
+    Is not necessary to fill all spaces in a row
+DROP TABLE IF EXISTS test;
+    DELETE table "test"
+    
+CREATE TABLE test(      // avoid to create rows with null values if declared
+ a INTEGER NOT NULL,
+ B TEXT NOT NULL,
+ C TEXT
+);
+
+INSERT INTO test (b,c) VALUES ('one', 'two');
+
+
+############### CONTRAINS CREATE RULES GOVERING THE BEHAVIOURS OF COLUMNS IN YOUR TABLE ################################
+
+CREATE TABLE test (a TEXT UNIQUE, b TEXT, c TEXT DEFAULT 'panda');
+    TEXT UNIQUE, TEXT DEFAULT ....
+    
+
+
+
 
